@@ -1,0 +1,40 @@
+/* Custom animations for portfolio */
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes float-profile {
+  0%, 100% {
+    transform: translateY(0px) scale(1) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-6px) scale(1.01) rotate(0.5deg);
+  }
+  50% {
+    transform: translateY(-8px) scale(1.02) rotate(0deg);
+  }
+  75% {
+    transform: translateY(-6px) scale(1.01) rotate(-0.5deg);
+  }
+}
+
+/* Utility classes */
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-float-profile {
+  animation: float-profile 8s ease-in-out infinite;
+  will-change: transform;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}

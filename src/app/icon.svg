@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- Professional, high-contrast monogram: deep navy background, white initials -->
+  <rect width="512" height="512" rx="96" fill="#0f172a"/>
+  <!-- Slight optical centering for better balance at favicon sizes -->
+  <text x="50%" y="52%" dominant-baseline="middle" text-anchor="middle"
+        font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif"
+        font-size="220" font-weight="800" fill="#ffffff" letter-spacing="2">
+    GM
+  </text>
+</svg>
+

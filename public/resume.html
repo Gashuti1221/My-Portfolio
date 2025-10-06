@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Resume - Gashaw Mandie</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: system-ui, sans-serif; color: #111; line-height: 1.6; background: #fff; font-size: 15px; }
+    .page { max-width: 750px; margin: 30px auto; padding: 24px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); border-radius: 6px; background: #fff; }
+    h1 { font-size: 26px; font-weight: 700; text-align: center; margin-bottom: 6px; }
+    h2 { font-size: 15px; color: #666; text-align: center; margin-bottom: 14px; }
+    h3 { font-size: 18px; font-weight: 600; margin: 18px 0 8px; border-bottom: 1px solid #ddd; padding-bottom: 4px; }
+    p { margin: 6px 0; font-size: 14px; }
+    .contact { text-align: center; margin: 10px 0; font-size: 14px; }
+    .social { display: flex; justify-content: center; gap: 10px; margin: 12px 0; flex-wrap: wrap; }
+    .social a { background: none; color: #2563eb; padding: 0; text-decoration: none; font-size: 13px; }
+    .social a:hover { text-decoration: underline; }
+    .section { margin: 14px 0; }
+    .project { margin: 8px 0; padding: 8px; background: #f9f9f9; border-radius: 4px; }
+    .project-title { font-weight: 600; font-size: 14px; margin-bottom: 3px; }
+    .project-desc { font-size: 13px; color: #555; }
+    .skills { display: grid; grid-template-columns: 1fr; gap: 8px; margin: 8px 0; }
+    .skill { background: #f3f3f3; padding: 6px; border-radius: 4px; font-size: 13px; }
+    .skill strong { display: block; font-size: 13px; margin-bottom: 2px; }
+    .education { background: #f9f9f9; padding: 8px; border-radius: 4px; }
+    .social-profiles div { margin: 4px 0; font-size: 13px; }
+    a { color: #2563eb; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .small { font-size: 12px; color: #666; font-style: italic; }
+    @media print { 
+      body { font-size: 14px; }
+      .page { box-shadow: none; margin: 0; max-width: 100%; padding: 20px; }
+      .social a { background: none; color: #2563eb; padding: 0; }
+    }
+    @media (max-width: 640px) { 
+      .page { margin: 12px; padding: 16px; } 
+      .social { flex-direction: column; align-items: center; } 
+    }
+  </style>
+  <script>
+    (function () {
+      function initEmailLink() {
+        var el = document.getElementById('emailLink');
+        if (!el) return;
+        el.addEventListener('click', function (e) {
+          e.preventDefault();
+          var to = (el.dataset.u || '') + '@' + (el.dataset.d || '');
+          if (!to || to.indexOf('@') === -1) return;
+          var url = 'https://mail.google.com/mail/?view=cm&fs=1&to=' + encodeURIComponent(to);
+          var w = window.open(url, '_blank', 'noopener');
+          if (!w) window.location.href = 'mailto:' + to;
+        });
+      }
+      if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initEmailLink);
+      else initEmailLink();
+    })();
+  </script>
+  
+</head>
+<body>
+  <div class="page">
+    <header>
+      <h1>Gashaw Mandie</h1>
+      <h2>Software Engineering Student | Full Stack Developer</h2>
+      <div class="contact">
+        Email: <a id="emailLink" href="#" data-u="gashawmandie" data-d="gmail.com" rel="nofollow noopener">Gashaw Mandie</a> | 
+        Phone: +251948319338
+      </div>
+      <div class="social">
+       |<a href="https://github.com/Gashuti1221" target="_blank">GitHub</a>| 
+        <a href="https://linkedin.com/in/gashaw-man21" target="_blank">LinkedIn</a> |
+        <a href="https://x.com/GashuMa03" target="_blank">Twitter/X</a> |
+        <a href="https://medium.com/@gashawmandie" target="_blank">Medium</a> |
+        <a href="https://gashaw-portfolio.vercel.app/" target="_blank">My Portfolio</a>|
+      </div>
+    </header>
+
+    <section class="section">
+      <h3>Summary</h3>
+      <p>I am a Software Engineering student at Bahir Dar University (expected graduation 2027) with hands-on experience in web development. Skilled in React, Redux, JavaScript, Java, JavaFX, HTML, CSS, SQL, Next.js, TypeScript, and Tailwind CSS. I have developed <strong>academic and personal projects</strong> including online bookstores, pharmacy management systems, calculators, and personal portfolios. Strong problem-solving skills, teamwork experience, and a fast learner, I am looking to contribute to a tech company or startup as a Front-end, Back-end, or Full-stack developer.</p>
+    </section>
+
+    <section class="section">
+      <h3>Skills</h3>
+      <div class="skills">
+        <div class="skill"><strong>Languages & Frameworks</strong>React | Redux | JavaScript | Java | JavaFX | HTML | CSS | Next.js | TypeScript | Tailwind CSS | SQL</div>
+        <div class="skill"><strong>Database</strong>SQL Server</div>
+        <div class="skill"><strong>Tools & Methods</strong>Git | GitHub</div>
+        <div class="skill"><strong>Professional</strong>Teamwork | Collaboration | Problem Solving</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h3>Projects</h3>
+      <div class="project">
+        <div class="project-title">Online Bookstore App – Full-stack Web App</div>
+        <div class="project-desc">Bookstore web app allowing browsing, searching, and adding books to cart.</div>
+        <div class="small">Tech: React | JavaScript | Redux | CSS</div>
+        <div class="small">◆ <strong>Built With:</strong> React, JavaScript, Redux, CSS</div>
+        <div class="small">◆ <strong>Visit Source:</strong> <a href="https://react-bookshelf-ivory.vercel.app" target="_blank">Live Source</a> | <a href="https://github.com/Gashuti1221/react-bookshelf" target="_blank">GitHub</a></div>
+      </div>
+      <div class="project">
+        <div class="project-title">MediTrack – Pharmacy Management System – Java Desktop App</div>
+        <div class="project-desc">Desktop app for managing supplier medicine records, sales, and inventory (academic project).</div>
+        <div class="small">Tech: Java | JavaFX | SQL Server</div>
+        <div class="small">◆ <strong>Built With:</strong> Java, JavaFX, SQL Server</div>
+        <div class="small">◆ <strong>Visit Source:</strong> <a href="https://github.com/Gashuti1221/java-phar-manag-sys-project/archive/refs/tags/v1.0.0.zip" target="_blank">Live Source</a> | <a href="https://github.com/Gashuti1221/java-phar-manag-sys-project" target="_blank">GitHub</a></div>
+      </div>
+      <div class="project">
+        <div class="project-title">CalcMagic – Smart Calculator App – Web App</div>
+        <div class="project-desc">Functional calculator with modern UI and responsive design.</div>
+        <div class="small">Tech: JavaScript | HTML | CSS</div>
+        <div class="small">◆ <strong>Built With:</strong> React, JavaScript, HTML, CSS</div>
+        <div class="small">◆ <strong>Visit Source:</strong> <a href="https://react-math-magician-calculator.vercel.app" target="_blank">Live Source</a> | <a href="https://github.com/Gashuti1221/react-math-magician-calculator" target="_blank">GitHub</a></div>
+      </div>
+      <div class="project">
+        <div class="project-title">My-Portfolio – Personal Website</div>
+        <div class="project-desc">Modern, responsive portfolio showcasing projects and skills.</div>
+        <div class="small">Tech: Next.js | TypeScript | Tailwind CSS</div>
+        <div class="small">◆ <strong>Built With:</strong> Next.js, TypeScript, Tailwind CSS</div>
+        <div class="small">◆ <strong>Visit Source:</strong> <a href="https://gashaw-portfolio.vercel.app/" target="_blank">Live Source</a></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h3>Education</h3>
+      <div class="education">
+        <div class="project-title">Bahir Dar University – BSc in Software Engineering (Expected 2027)</div>
+        <div class="project-desc">Current 4th year student.</div>
+        <p>Learned software development, algorithms, data structures, and programming languages including Java, JavaFX, JavaScript, HTML, CSS, and SQL.</p>
+        <div class="small">Coursework: Algorithms | Databases | Software Engineering | Object-Oriented Programming</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h3>Social / Online Profiles</h3>
+      <div class="social-profiles">
+        <div>GitHub: <a href="https://github.com/Gashuti1221" target="_blank">github.com/Gashuti1221</a></div>
+        <div>LinkedIn: <a href="https://linkedin.com/in/gashaw-man21" target="_blank">linkedin.com/in/gashaw-man21</a></div>
+        <div>Twitter/X: <a href="https://x.com/GashuMa03" target="_blank">x.com/GashuMa03</a></div>
+        <div>Medium: <a href="https://medium.com/@gashawmandie" target="_blank">medium.com/@gashawmandie</a></div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
